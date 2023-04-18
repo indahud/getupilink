@@ -113,7 +113,7 @@ const UpiForm = () => {
         </Form>
       ) : (
         <div>
-          <p>{upiLink.url}</p>
+          <input type="text" readOnly value={upiLink.url} />
           <p>
             <button onClick={copyLink}>{copyMessage}</button>
           </p>
