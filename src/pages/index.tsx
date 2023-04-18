@@ -2,10 +2,10 @@ import { Form, Field } from 'react-final-form';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-type FormData  = {
+type FormData = {
   upiID: string;
   amount?: number;
-}
+};
 
 type FormErrors = {
   upiID?: string;
@@ -33,9 +33,9 @@ const validate = (values: FormData) => {
   return errors;
 };
 
-
 const UpiForm = () => {
   const router = useRouter();
+  const [copyMessage, setCopyMessage] = useState('Copy Link');
   const [upiLink, setUpiLink] = useState<LinkProps>({
     show: false,
     url: '',
@@ -58,6 +58,15 @@ const UpiForm = () => {
 
   const redirectToPage = () => {
     router.push(upiLink.url);
+  };
+
+  const copyLink = () => {
+    const url = upiLink.url;
+    navigator.clipboard.writeText(url);
+    setCopyMessage('Copied 🚀');
+    setTimeout(() => {
+      setCopyMessage('Copy UPI Link');
+    }, 1000);
   };
 
   return (
@@ -105,6 +114,9 @@ const UpiForm = () => {
       ) : (
         <div>
           <p>{upiLink.url}</p>
+          <p>
+            <button onClick={copyLink}>{copyMessage}</button>
+          </p>
           <button onClick={redirectToPage}>Go to link</button>
         </div>
       )}
