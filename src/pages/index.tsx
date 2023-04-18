@@ -1,6 +1,7 @@
 import { Form, Field } from 'react-final-form';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import SeoMeta from '@/components/meta';
 
 type FormData = {
   upiID: string;
@@ -71,6 +72,7 @@ const UpiForm = () => {
 
   return (
     <>
+      <SeoMeta />
       {!upiLink.show ? (
         <Form onSubmit={submitHandler} validate={validate}>
           {({ handleSubmit }) => (
