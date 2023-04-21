@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.1.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
@@ -22,10 +21,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-final-form": "^6.5.9",
-    "react-hook-form": "^7.43.9",
     "react-qr-code": "^2.0.11",
     "tailwindcss": "3.3.1",
-    "typescript": "5.0.4",
-    "zod": "^3.21.4"
+    "typescript": "5.0.4"
   }
 }
