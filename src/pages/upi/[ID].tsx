@@ -15,7 +15,7 @@ const UpiQR: NextPage = () => {
   return (
     <>
       <div className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        <div className="mt-8 w-full sm:w-4/12 mx-auto px-2 sm:px-0">
           <div className="bg-white py-8 px-4 sm:rounded-lg sm:px-10 border border-gray-300 shadow">
             <div className="mb-4">
               <p className='flex items-center justify-center text-2xl tracking-tight text-gray-700'>
@@ -33,11 +33,11 @@ const UpiQR: NextPage = () => {
               />
             </div>
             <div className="flex items-center justify-center mt-2 text-gray-900 text-lg">
-              <p>Scan this QR with any UPI ID</p>
+              <p>Scan this QR with any UPI App</p>
             </div>
           </div>
           <div>
-            <div className="w-full mt-6 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-xl font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div className="w-full mt-6 flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               <a href={paymentlink} target="_blank" rel="noopener noreferrer">
                 Pay
               </a>
