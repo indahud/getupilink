@@ -1,27 +1,46 @@
 import { useState } from 'react';
+import { Poppins, Inter } from 'next/font/google';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const poppins = Poppins({
+  weight: '700',
+  subsets: ['latin'],
+});
+
+const inter = Inter({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 export const Navbar = () => {
   const [state, setState] = useState(false);
 
-  // Replace javascript:void(0) paths with your paths
   const navigation = [
     { title: 'About', path: '/about' },
     { title: 'Contact', path: '/contact' },
-    { title: 'Blog', path: '/blog' },
+    // { title: 'Blog', path: '/blog' },
   ];
 
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
-      <div className='flex items-center'>
-        <img
-          src="payment.webp"
+      <Link href="/" className="flex items-center">
+        {/* <Image
+          src="/payment.webp"
           width={50}
           height={40}
-          alt="UPI link generate"
-          className="rounded"
+          alt="UPI"
+        /> */}
+        <img 
+          src='/payment.webp'
+          width={40}
+          height={40}
+          alt="UPI"
         />
-        <p className="ml-2 text-white text-lg font-bold">UPI generator</p>
-      </div>
+        <p className={`${poppins.className} ml-2 text-white text-lg font-bold`}>
+          UPI generator
+        </p>
+      </Link>
       <div className="md:hidden">
         <button
           className="menu-btn text-gray-400 hover:text-gray-300"
@@ -82,9 +101,12 @@ export const Navbar = () => {
               } `}
             >
               <ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-                {navigation.map((item, idx) => {
+                {navigation.map((item) => {
                   return (
-                    <li key={idx} className="text-gray-300 hover:text-gray-400">
+                    <li
+                      key={item.title}
+                      className={`${inter.className} text-gray-300 hover:text-gray-400`}
+                    >
                       <a href={item.path} className="block">
                         {item.title}
                       </a>

@@ -3,9 +3,16 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import SeoMeta from '@/components/meta';
 import * as gtag from '../utils/analytics';
-import Link from 'next/link';
-import { Navbar } from '@/components/Navbar';
 import { HeroSection } from '@/components/Hero';
+
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ 
+  weight: '400',
+  subsets: ['latin'],
+})
+
+
 
 type FormData = {
   upiID: string;
@@ -96,7 +103,7 @@ const UpiForm = () => {
                     <div>
                       <label
                         htmlFor="upiID"
-                        className="block text-sm font-medium text-gray-700"
+                        className={`${inter.className} block text-gray-700`}
                       >
                         UPI ID
                       </label>
@@ -105,15 +112,15 @@ const UpiForm = () => {
                           name="upiID"
                           component="input"
                           type="text"
-                          className="text-gray-900"
+                          className={`${inter.className} tracking-wider text-gray-900`}
                         >
                           {({ input, meta }) => (
                             <div>
                               <input
                                 {...input}
                                 type="text"
-                                placeholder="UPI ID"
-                                className="appearance-none block w-full px-4 py-4 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                placeholder="UPI ID / VPA"
+                                className={`${inter.className} tracking-wider block w-full px-4 py-4 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                               />
                               {meta.error && meta.touched && (
                                 <div className="mt-1 text-pink-500">
@@ -129,7 +136,7 @@ const UpiForm = () => {
                     <div>
                       <label
                         htmlFor="amount"
-                        className="block text-sm font-medium text-gray-700"
+                        className={`${inter.className} block text-gray-700`}
                       >
                         Amount
                       </label>
@@ -146,7 +153,7 @@ const UpiForm = () => {
                                 {...input}
                                 type="number"
                                 placeholder="Amount"
-                                className="appearance-none block w-full px-4 py-4 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                className={`${inter.className} tracking-wider block w-full px-4 py-4 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                               />
                               {meta.error && meta.touched && (
                                 <div className="text-pink-500">
@@ -162,7 +169,7 @@ const UpiForm = () => {
                     <div>
                       <button
                         type="submit"
-                        className="w-full mb-10 mt-7 flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        className={`${inter.className} w-full mb-10 mt-7 flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
                       >
                         Process
                       </button>
@@ -175,11 +182,11 @@ const UpiForm = () => {
                 <div className="flex items-center">
                   <input
                     value={upiLink.url}
-                    className="mr-2 w-full px-4 text-gray-700 py-4 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className={`${inter.className} mr-2 w-full px-4 text-gray-700 py-4 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                   />
                   <button
                     onClick={copyLink}
-                    className="pt-3 pb-4 pl-4 pr-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none"
+                    className={`${inter.className} pt-3 pb-4 pl-4 pr-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none`}
                   >
                     {copyMessage}
                   </button>
@@ -189,7 +196,7 @@ const UpiForm = () => {
                   <button
                     type="submit"
                     onClick={redirectToPage}
-                    className="w-full mt-6 flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className={`${inter.className} w-full mt-6 flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
                   >
                     Preview
                   </button>

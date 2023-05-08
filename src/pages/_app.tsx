@@ -1,16 +1,16 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
-import Script from 'next/script'
-import { useEffect } from 'react'
-import * as gtag from '../utils/analytics'
-import { Navbar } from '@/components/Navbar'
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
+import { useEffect } from 'react';
+import * as gtag from '../utils/analytics';
+import { Navbar } from '@/components/Navbar';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
-      gtag.pageview(url)
+      gtag.pageview(url);
     };
 
     router.events.on('routeChangeComplete', handleRouteChange);
@@ -22,10 +22,12 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Script strategy='afterInteractive' src='https://www.googletagmanager.com/gtag/js?id=G-41B01KSZCF' />
-      <Script id='google-analytics' strategy='afterInteractive'>
-        {
-          `
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-41B01KSZCF"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -33,13 +35,12 @@ export default function App({ Component, pageProps }: AppProps) {
           gtag('config', 'G-41B01KSZCF', {
             page_path: window.location.pathname,
           });
-          `
-        }
+          `}
       </Script>
-      <Navbar />  
+      <Navbar />
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 
 //G-C8XJM1MDMZ
