@@ -12,19 +12,20 @@ export const Navbar = () => {
 
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
-      <a href="#">
-        {/* <img
-                  src="https://www.floatui.com/logo-dark.svg"
-                  width={120}
-                  height={50}
-                  alt="Float UI logo"
-              /> */}
-        <p className="text-white text-lg">UPI </p>
-      </a>
+      <div className='flex items-center'>
+        <img
+          src="payment.webp"
+          width={50}
+          height={40}
+          alt="UPI link generate"
+          className="rounded"
+        />
+        <p className="ml-2 text-white text-lg font-bold">UPI generator</p>
+      </div>
       <div className="md:hidden">
         <button
           className="menu-btn text-gray-400 hover:text-gray-300"
-          title='hamburger'
+          title="hamburger"
           onClick={() => setState(!state)}
         >
           {state ? (
@@ -90,7 +91,6 @@ export const Navbar = () => {
                     </li>
                   );
                 })}
-               
               </ul>
             </div>
           </div>
