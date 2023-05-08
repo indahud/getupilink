@@ -8,8 +8,7 @@ export const HeroSection = () => {
               Generate upi link for free
             </h2>
             <p className="max-w-2xl mx-auto text-gray-400">
-              Sed ut perspiciatis unde omnis iste natus voluptatem accusantium
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+              Scan with any app
             </p>
           </div>
         </div>

@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
-      <a href="javascript:void(0)">
+      <a href="#">
         {/* <img
                   src="https://www.floatui.com/logo-dark.svg"
                   width={120}
@@ -24,6 +24,7 @@ export const Navbar = () => {
       <div className="md:hidden">
         <button
           className="menu-btn text-gray-400 hover:text-gray-300"
+          title='hamburger'
           onClick={() => setState(!state)}
         >
           {state ? (

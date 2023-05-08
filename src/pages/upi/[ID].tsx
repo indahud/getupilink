@@ -1,3 +1,4 @@
+import SeoMeta from '@/components/meta';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import QRCode from 'react-qr-code';
@@ -5,24 +6,26 @@ import QRCode from 'react-qr-code';
 const UpiQR: NextPage = () => {
   const router = useRouter();
   const { ID, am } = router.query;
-  const paymentlink = `upi://pay?pn=withUpigen&pa=${ID}&cu=INR${`&am=${
+  const paymentlink = `upi://pay?pn=upigenerator&pa=${ID}&cu=INR${`&am=${
     am ? am : ''
   }`}`;
 
-  const redirectToUpi = () => {
-    router.push(paymentlink);
+  const seoData = {
+    title: 'UPI payment link',
+    description: 'upi payment link',
   };
   return (
     <>
+      <SeoMeta {...seoData} />
       <div className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="mt-8 w-full sm:w-4/12 mx-auto px-2 sm:px-0">
           <div className="bg-white py-8 px-4 sm:rounded-lg sm:px-10 border border-gray-300 shadow">
             <div className="mb-4">
-              <p className='flex items-center justify-center text-2xl tracking-tight text-gray-700'>
+              <p className="flex items-center justify-center text-2xl tracking-tight text-gray-700">
                 You are paying {am ? `INR ${am}` : ''}
               </p>
-              <p className='flex items-center mt-1 justify-center text-2xl tracking-tight text-gray-700'>
-                to 👉 <span className='ml-2 font-bold'>{ID}</span>
+              <p className="flex items-center mt-1 justify-center text-2xl tracking-tight text-gray-700">
+                to 👉 <span className="ml-2 font-bold">{ID}</span>
               </p>
             </div>
             <div className="flex items-center justify-center">
@@ -33,7 +36,7 @@ const UpiQR: NextPage = () => {
               />
             </div>
             <div className="flex items-center justify-center mt-2 text-gray-900 text-lg">
-              <p>Scan this QR with any UPI App</p>
+              <p className="font-bold">Scan and pay with any UPI app</p>
             </div>
           </div>
           <div>
