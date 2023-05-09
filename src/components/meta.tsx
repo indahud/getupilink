@@ -5,7 +5,7 @@ const defaultMeta = {
   title: 'Generate Free UPI Link',
   description: 'Generate Free UPI Link',
   keywords: 'upi link generator, free upi link generator, upi qr code generator',
-  topics: 'payment, upi, qr',
+  topics: 'payment, upi, qr, bhim',
   topic: 'payment',
   siteName: 'https://upigenerator.com',
   ogImage: 'https://upigenerator.com/og.png',
@@ -55,7 +55,7 @@ const SeoMeta: React.FunctionComponent<MetaProps> = ({
         property="og:image"
         content=""
       />
-      <meta name="og:type" content={topic || defaultMeta.topic} />
+      {/* <meta name="og:type" content={topic || defaultMeta.topic} /> */}
       <meta
         property="og:site_name"
         content={siteName || defaultMeta.siteName}
