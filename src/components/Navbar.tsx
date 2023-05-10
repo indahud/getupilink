@@ -25,14 +25,8 @@ export const Navbar = () => {
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
       <Link href="/" className="flex items-center">
-        {/* <Image
+        <Image
           src="/payment.webp"
-          width={50}
-          height={40}
-          alt="UPI"
-        /> */}
-        <img 
-          src='/payment.webp'
           width={40}
           height={40}
           alt="UPI"
