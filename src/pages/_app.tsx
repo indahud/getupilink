@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { useEffect } from 'react';
 import * as gtag from '../utils/analytics';
 import { Navbar } from '@/components/Navbar';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -39,6 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Script>
       <Navbar />
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
