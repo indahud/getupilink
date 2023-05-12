@@ -61,6 +61,7 @@ const SeoMeta: React.FunctionComponent<MetaProps> = ({
         content={siteName || defaultMeta.siteName}
       />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <meta name="google-site-verification" content="yvXFr6tCnS2azYwkEzDIiwEZgwsFP9q0j9-C_K2g-ew" />
     </Head>
   );
 };
