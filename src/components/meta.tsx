@@ -7,8 +7,8 @@ const defaultMeta = {
   keywords: 'upi link generator, free upi link generator, upi qr code generator',
   topics: 'payment, upi, qr, bhim',
   topic: 'payment',
-  siteName: 'https://upigenerator.com',
-  ogImage: 'https://upigenerator.com/og.png',
+  siteName: 'https://getupilink.com',
+  ogImage: 'https://getupilink.com/og_image.svg',
   canonicalUrl: '',
 };
 
@@ -53,7 +53,7 @@ const SeoMeta: React.FunctionComponent<MetaProps> = ({
       />
       <meta
         property="og:image"
-        content=""
+        content={ogImage || defaultMeta.ogImage}
       />
       {/* <meta name="og:type" content={topic || defaultMeta.topic} /> */}
       <meta
@@ -61,7 +61,6 @@ const SeoMeta: React.FunctionComponent<MetaProps> = ({
         content={siteName || defaultMeta.siteName}
       />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      {/* <meta property="og:url" content={canonicalUrl || defaultMeta.canonicalUrl} /> */}
     </Head>
   );
 };
