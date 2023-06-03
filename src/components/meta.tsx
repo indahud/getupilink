@@ -3,7 +3,7 @@ import React from 'react';
 
 const defaultMeta = {
   title: 'Generate Free UPI Link',
-  description: 'Generate Free UPI Link',
+  description: 'Generate Free UPI Link with getupilink.com. You can create QR Code. It supports PhonePe, Google Pay and many other payment applications.',
   keywords: 'upi link generator, free upi link generator, upi qr code generator',
   topics: 'payment, upi, qr, bhim',
   topic: 'payment',
