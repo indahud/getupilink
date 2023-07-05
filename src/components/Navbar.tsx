@@ -75,8 +75,7 @@ export const Navbar = () => {
     </div>
   );
   return (
-    <div className="bg-gray-900">
-      <header>
+      <header className="bg-gray-900">
         <div className={`md:hidden ${state ? 'mx-2 pb-5' : 'hidden'}`}>
           <Brand />
         </div>
@@ -112,6 +111,5 @@ export const Navbar = () => {
           </div>
         </nav>
       </header>
-    </div>
   );
 };

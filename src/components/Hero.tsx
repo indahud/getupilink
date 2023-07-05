@@ -12,8 +12,7 @@ const inter = Inter({
 
 export const HeroSection = () => {
   return (
-    <div className="bg-gray-900">
-      <section className="relative">
+      <section className="relative bg-gray-900">
         <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
           <div className="space-y-5 max-w-4xl mx-auto text-center">
             <h2 className={`${poppins.className} text-4xl text-white font-extrabold mx-auto md:text-5xl`}>
@@ -30,6 +29,5 @@ export const HeroSection = () => {
           }}
         ></div>
       </section>
-    </div>
   );
 };

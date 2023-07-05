@@ -93,7 +93,7 @@ const UpiForm = () => {
     <>
       <SeoMeta />
       <HeroSection />
-      <div className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <section className="flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="mt-8 w-full sm:full md:w-6/12 lg:w-2/6 mx-auto px-2 sm:px-0">
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             {!upiLink.show ? (
@@ -205,8 +205,7 @@ const UpiForm = () => {
             )}
           </div>
         </div>
-      </div>
-      
+      </section>
     </>
   );
 };
