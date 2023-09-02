@@ -7,7 +7,7 @@ import { HeroSection } from '@/components/Hero';
 
 import { Inter } from 'next/font/google';
 
-const inter = Inter({ 
+const inter = Inter({
   weight: '400',
   subsets: ['latin'],
 })
@@ -56,11 +56,11 @@ const UpiForm = () => {
 
   const submitHandler = (values: FormData) => {
     let link;
-
+    const newUpiId = values.upiID.trim()
     if (values.amount) {
-      link = `/upi/${values.upiID}?am=${values.amount}`;
+      link = `/upi/${newUpiId}?am=${values.amount}`;
     } else {
-      link = `/upi/${values.upiID}`;
+      link = `/upi/${newUpiId}`;
     }
 
     setUpiLink({
@@ -71,7 +71,7 @@ const UpiForm = () => {
     gtag.event({
       action: 'upi_payment_link',
       category: 'engagement',
-      label: `UPI ID: ${values.upiID} - Amount: ${values.amount || null}`,
+      label: `UPI ID: ${newUpiId} - Amount: ${values.amount || null}`,
       value: `New UPI payment link`,
     });
   };
@@ -87,7 +87,28 @@ const UpiForm = () => {
     setTimeout(() => {
       setCopyMessage('Copy');
     }, 1000);
-  };    
+  };
+
+  const refreshPage = () => {
+    window.location.reload()
+  }
+
+  const shareLink = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: 'Your gnerated upi link to accept payment',
+          text: 'Check out this upi link',
+          url: upiLink.url,
+        })
+      } else {
+        throw new Error('navigator.share is not supported in this browser')
+      }
+    } catch (error) {
+      console.log('Error while sharing link')
+    }
+
+  }
 
   return (
     <>
@@ -179,7 +200,24 @@ const UpiForm = () => {
               </Form>
             ) : (
               <>
+                <div className='flex justify-between mb-3'>
+                  <button
+                    className='text-sm rounded-md bg-gray-600 pl-3 pr-3 pb-2/3 pt-2/3 text-white'
+                    onClick={refreshPage}
+                  >Generate New</button>
+                  <div className='flex items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" className='w-4 h-4 font-medium' viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M8 9h-1a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-8a2 2 0 0 0 -2 -2h-1" />
+                      <path d="M12 14v-11" />
+                      <path d="M9 6l3 -3l3 3" />
+                    </svg>
+                    <button className="text-sm font-medium underline text-gray-600 " onClick={shareLink}>Share</button>
+                  </div>
+
+                </div>
                 <div className="flex items-center">
+
                   <input
                     value={upiLink.url}
                     className={`${inter.className} mr-2 w-full px-4 text-gray-700 py-4 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}

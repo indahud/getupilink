@@ -26,13 +26,13 @@ export const Navbar = () => {
     <div className="flex items-center justify-between py-5 md:block">
       <Link href="/" className="flex items-center">
         <Image
-          src="/payment.webp"
+          src="/small.svg"
           width={40}
           height={40}
           alt="UPI"
         />
         <p className={`${poppins.className} ml-2 text-white text-lg font-bold`}>
-          UPI generator
+          UPI link generator
         </p>
       </Link>
       <div className="md:hidden">
