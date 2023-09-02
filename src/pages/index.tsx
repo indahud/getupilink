@@ -62,10 +62,10 @@ const UpiForm = () => {
     } else {
       link = `/upi/${newUpiId}`;
     }
-
+    
     setUpiLink({
       show: true,
-      url: `${window.location.protocol}//${window.location.hostname}:${window.location.port}${link}`,
+      url: `${window.location.protocol}//${window.location.hostname}${link}`,
     });
 
     gtag.event({
