@@ -8,7 +8,7 @@ const defaultMeta = {
   topics: 'payment, upi, qr, bhim',
   topic: 'payment',
   siteName: 'https://getupilink.com',
-  ogImage: 'https://getupilink.com/og_image.svg',
+  ogImage: 'https://getupilink.com/og_image.png',
   canonicalUrl: '',
 };
 
