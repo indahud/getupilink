@@ -15,10 +15,10 @@ export const HeroSection = () => {
       <section className="relative bg-gray-900">
         <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
           <div className="space-y-5 max-w-4xl mx-auto text-center">
-            <h2 className={`${poppins.className} text-4xl text-white font-extrabold mx-auto md:text-5xl`}>
+            <h1 className={`${poppins.className} text-4xl text-white font-extrabold mx-auto md:text-5xl`}>
               Generate upi link for free
-            </h2>
-            <p className={`${inter.className} max-w-2xl mx-auto text-gray-400`}>Scan with any upi app</p>
+            </h1>
+            <p className={`${inter.className} max-w-2xl mx-auto text-gray-400`}>Scan qr or directly open with any upi app</p>
           </div>
         </div>
         <div
