@@ -13,7 +13,7 @@ const About = () => {
             </p>
           </div>
           <p className="text-lg text-gray-800 dark:text-gray-200">
-            getupilink is 100% free. It doesn&apos;t have any ads. Because I dont have any plans to make money with this.
+            getupilink is 100% free and open source. It doesn&apos;t have any ads. Because I dont have any plans to make money with this.
           </p>
           <div className="space-y-3">
             <h3 className="text-2xl font-semibold dark:text-white">
