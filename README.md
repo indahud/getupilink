@@ -1,7 +1,7 @@
 # UPI Payment Link Generator
 
 ## How you can create sharable UPI link with getupilink.com ??
-To create sharable UPI link, you need to add your UPI id. If you want to recieve fixed amount then enter your amount. Amount is optional.   
+You can create sharable UPI link easily by providing your UPI id and amount. Amount is optional.
 
 ## Features 🚀:
 - Directly open inside any UPI supported app on Mobile devices
