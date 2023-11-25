@@ -62,6 +62,8 @@ const SeoMeta: React.FunctionComponent<MetaProps> = ({
       />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       <meta name="google-site-verification" content="ojkvgtSayTMXjSqowJ7WcEBobUANbgRrBRHQlq4vJPU" />
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" />
     </Head>
   );
 };
