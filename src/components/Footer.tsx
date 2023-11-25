@@ -6,6 +6,7 @@ export const Footer = () => {
                     <a
                         className="w-10 h-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
                         href="htps://twitter.com/Indie_h4cker"
+                        aria-label="Twitter"
                     >
                         <svg
                             className="flex-shrink-0 w-4 h-4"
@@ -21,6 +22,7 @@ export const Footer = () => {
                     <a
                         className="w-10 h-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
                         href="https://github.com/indahud/getupilink"
+                        aria-label="Github"
                     >
                         <svg
                             className="flex-shrink-0 w-4 h-4"
