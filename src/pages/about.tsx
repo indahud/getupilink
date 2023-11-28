@@ -16,7 +16,7 @@ const About = () => {
             getupilink is 100% free and open source. It doesn&apos;t have any ads. Because I dont have any plans to make money with this.
           </p>
           <div className="space-y-3">
-            <h3 className="text-2xl font-semibold dark:text-white">
+            <h3 className="text-2xl font-semibold">
               Tech Stack 👨🏿‍💻
             </h3>
             <ul className="list-disc list-outside space-y-5 ps-5 text-lg text-gray-800">
