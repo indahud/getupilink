@@ -42,6 +42,13 @@ export default function App({ Component, pageProps }: AppProps) {
             `,
         }}
       ></Script>
+      {process.env.NODE_ENV === 'production' ?? (
+        <Script
+          async
+          src="https://us.umami.is/script.js"
+          data-website-id="6c19ecc9-662f-4f19-8126-0126c22fe3b8"
+        />
+      )}
       <MainLayout>
         <Component {...pageProps} />
         <Analytics />
