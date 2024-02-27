@@ -37,3 +37,19 @@ export const countries = [
   { code: '+44', name: 'United Kingdom ' },
   { code: '+84', name: 'Vietnam ' },
 ];
+
+export const cardItems = [
+  {
+    id: "1",
+    title: "Generate upi payment link",
+    description: "Enter your merchant UPI ID to start accepting the payment",
+    slug: `/`,
+  },
+  {
+    id: "2",
+    title: "Send whatsapp message without saving number",
+    description:
+      "Send message to any whats app number without saving it on your device",
+    slug: `/tools/open-in-whatsapp`,
+  },
+];

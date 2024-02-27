@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { useEffect } from 'react';
 import * as gtag from '../utils/analytics';
-import { Navbar } from '@/components/Navbar';
-import { Analytics } from '@vercel/analytics/react';
 import MainLayout from '@/components/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -49,10 +47,8 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <MainLayout>
         <Component {...pageProps} />
-        <Analytics />
       </MainLayout>
     </>
   );
 }
 
-//G-C8XJM1MDMZ

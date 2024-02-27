@@ -1,6 +1,11 @@
-import { inter, grotesk } from '@/utils/fonts';
+import { inter, grotesk } from "@/utils/fonts";
 
-export const WhatsAppHeroSection = () => {
+type CommonHeroProps = {
+  title: string;
+  description: string;
+};
+
+export const CommonHeroSection = ({ title, description }: CommonHeroProps) => {
   return (
     <section className="relative bg-gray-900">
       <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
@@ -8,10 +13,10 @@ export const WhatsAppHeroSection = () => {
           <h1
             className={`${grotesk} text-4xl text-white font-extrabold mx-auto md:text-5xl`}
           >
-            Open whats app without saving number
+            {title}
           </h1>
           <p className={`${inter} max-w-2xl mx-auto text-gray-300`}>
-            Easily start conversation with unknown number without saving it.
+            {description}
           </p>
         </div>
       </div>
@@ -19,7 +24,7 @@ export const WhatsAppHeroSection = () => {
         className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"
         style={{
           background:
-            'linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)',
+            "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)",
         }}
       ></div>
     </section>

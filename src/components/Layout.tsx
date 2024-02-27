@@ -9,9 +9,9 @@ interface MainLayoutProps {
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+      <Navbar />
+      <main className="min-h-screen">{children}</main>
+      <Footer />
     </>
   );
 };

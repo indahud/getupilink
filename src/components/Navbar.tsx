@@ -1,35 +1,31 @@
 import { useState } from 'react';
-import { Poppins, Inter } from 'next/font/google';
-import Image from 'next/image';
 import Link from 'next/link';
-
-const poppins = Poppins({
-  weight: '700',
-  subsets: ['latin'],
-});
-
-const inter = Inter({
-  weight: '400',
-  subsets: ['latin'],
-});
+import { inter, poppins } from "@/utils/fonts";
 
 export const Navbar = () => {
   const [state, setState] = useState(false);
 
   const navigation = [
-    { title: 'About', path: '/about' }
+    { title: "All Tools", path: "/tools" },
+    { title: "About", path: "/about" },
   ];
 
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
       <Link href="/" className="flex items-center">
-        <Image
-          src="/logo.svg"
+        <img
+          alt="UPI"
+          loading="lazy"
           width={40}
           height={40}
-          alt="UPI"
+          decoding="async"
+          data-nimg={1}
+          style={{ color: "transparent" }}
+          src="/getupilink.svg"
         />
-        <p className={`${poppins.className} ml-2 text-white text-2xl font-black tracking-wide`}>
+        <p
+          className={`${poppins} ml-2 text-white text-2xl font-extrabold tracking-wide`}
+        >
           GETUPILINK
         </p>
       </Link>
@@ -91,12 +87,12 @@ export const Navbar = () => {
                 state ? 'block' : 'hidden'
               } `}
             >
-              <ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+              <ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0 mb-2">
                 {navigation.map((item) => {
                   return (
                     <li
                       key={item.title}
-                      className={`${inter.className} text-gray-100 hover:text-gray-400 font-black`}
+                      className={`${inter} text-gray-100 hover:text-gray-400 font-semibold`}
                     >
                       <a href={item.path} className="block">
                         {item.title}
