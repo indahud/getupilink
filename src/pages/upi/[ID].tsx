@@ -10,11 +10,12 @@ const UpiQR: NextPage = () => {
   const paymentlink = `upi://pay?pn=upigenerator&pa=${ID}&cu=INR${`&am=${
     am ? am : ''
   }`}`;
-  const canonicalUrl = window.location.href;
+  
+  const baseUrl = 'https://getupilink.com'
   const seoData = {
     title: "UPI payment link",
     description: "upi payment link",
-    canonicalUrl: canonicalUrl,
+    canonicalUrl: `${baseUrl}${router.asPath}`,
   };
   return (
     <>
