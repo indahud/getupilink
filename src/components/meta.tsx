@@ -64,6 +64,7 @@ const SeoMeta: React.FunctionComponent<MetaProps> = ({
       <meta name="google-site-verification" content="ojkvgtSayTMXjSqowJ7WcEBobUANbgRrBRHQlq4vJPU" />
       <link rel="manifest" href="/manifest.json" />
       <meta name="theme-color" />
+      <meta name="msvalidate.01" content="EC7ACAD5C3615200CDA8212D18D47F04" />
     </Head>
   );
 };
