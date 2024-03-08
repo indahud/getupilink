@@ -40,16 +40,44 @@ export const countries = [
 
 export const cardItems = [
   {
-    id: "1",
-    title: "Generate upi payment link",
-    description: "Enter your merchant UPI ID to start accepting the payment",
+    id: '1',
+    title: 'Generate upi payment link',
+    description: 'Enter your merchant UPI ID to start accepting the payment',
     slug: `/`,
   },
   {
-    id: "2",
-    title: "Send whatsapp message without saving number",
+    id: '2',
+    title: 'Send whatsapp message without saving number',
     description:
-      "Send message to any whats app number without saving it on your device",
+      'Send message to any whats app number without saving it on your device',
     slug: `/tools/open-in-whatsapp`,
+  },
+];
+
+export const upiLinkFaqs = [
+  {
+    question: 'What is UPI?',
+    answer:
+      'UPI, or Unified Payments Interface, is a real-time payment system developed by the National Payments Corporation of India (NPCI). It allows users to link multiple bank accounts to a single mobile application, enabling seamless and instant money transfers.',
+  },
+  {
+    question: 'How much money can be transferred through UPI?',
+    answer:
+      'The maximum UPI daily transfer limit can change from bank to bank between Rs.25,000 to Rs.1 lakh. However, the limit is Rs.5 lakh for payments to educational institutions and healthcare.',
+  },
+  {
+    question: 'How do I create UPI link?',
+    answer:
+      'To create UPI link you will need UPI ID. You can find your UPI ID in different apps like Google Pay, Phonepe, paytm. Enter your UPI Id and optional amount. Share the generated link to recieve payment.',
+  },
+  {
+    question: 'What are UPI payment link?',
+    answer:
+      'UPI payment link are easy and convenient way to recieve payments. According to the users merchant UPI id the payment link will be genrated. That link can be shared to accept the payments.',
+  },
+  {
+    question: 'What are the use cases of upi link generator?',
+    answer:
+      'Upi link generator can be used in different scenarios. Some of the use cases are small businesses, ngos, freelancers, consultants, service providers, ecommerce platform and anyone who has merchant UPI ID.',
   },
 ];

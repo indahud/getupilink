@@ -38,6 +38,9 @@ dependencies:
   final-form:
     specifier: ^4.20.9
     version: 4.20.9
+  lucide-react:
+    specifier: ^0.350.0
+    version: 0.350.0(react@18.2.0)
   next:
     specifier: 13.3.0
     version: 13.3.0(@babel/core@7.23.3)(react-dom@18.2.0)(react@18.2.0)
@@ -3678,6 +3681,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /lucide-react@0.350.0(react@18.2.0):
+    resolution: {integrity: sha512-5IZVKsxxG8Nn81gpsz4XLNgCAXkppCh0Y0P0GLO39h5iVD2WEaB9of6cPkLtzys1GuSfxJxmwsDh487y7LAf/g==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /magic-string@0.25.9:

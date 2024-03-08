@@ -1,19 +1,19 @@
-import SeoMeta from "@/components/meta";
+import SeoMeta from '@/components/meta';
 
 const About = () => {
   const metaTags = {
-    title: "About Me | getupilink.com",
+    title: 'About Me | getupilink.com',
     description:
-      "getupilink.com provides a way to easily accept upi payments through link.",
-    keywords: "whatsapp, whatsapp open",
-    ogImage: "https://getupilink.com/og_image.png",
-    topics: "upi, about",
+      'getupilink.com provides a way to easily accept upi payments through link.',
+    keywords: 'whatsapp, whatsapp open',
+    ogImage: 'https://getupilink.com/og_image.png',
+    topics: 'upi, about',
   };
   return (
     <>
       <SeoMeta {...metaTags} />
-      <section>
-        <div className="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto mb-28">
+      <section className="flex justify-center">
+        <div className="max-w-3xl mx-auto mx-4 sm:mx-0 px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 border rounded-xl border bg-card shadow mt-14 mb-10 bg-white">
           <div className="max-w-2xl">
             <div className="space-y-5 md:space-y-8">
               <div className="space-y-3">

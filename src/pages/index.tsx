@@ -5,6 +5,8 @@ import SeoMeta from '@/components/meta';
 import * as gtag from '../utils/analytics';
 import { inter, grotesk } from "@/utils/fonts";
 import { CommonHeroSection } from '@/components/Hero/common';
+import { UpiFaqs } from '@/components/Faqs/upi';
+import { upiLinkFaqs } from '@/utils/constants';
 
 type FormData = {
   upiID: string;
@@ -110,9 +112,9 @@ const UpiForm = () => {
     <>
       <SeoMeta />
       <CommonHeroSection {...heroProps} />
-      <section className="flex flex-col justify-center py-12 sm:px-6 lg:px-8 mb-28">
+      <section className="flex flex-col justify-center py-12 sm:px-6 lg:px-8 mb-14">
         <div className="mt-8 w-full sm:full md:w-6/12 lg:w-2/6 mx-auto px-2 sm:px-0">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+          <div className="bg-white py-8 px-4 shadow rounded-lg sm:px-10">
             {!upiLink.show ? (
               <Form onSubmit={submitHandler} validate={validate}>
                 {({ handleSubmit }) => (
@@ -254,6 +256,7 @@ const UpiForm = () => {
           </div>
         </div>
       </section>
+      <UpiFaqs data={upiLinkFaqs}/>
     </>
   );
 };
