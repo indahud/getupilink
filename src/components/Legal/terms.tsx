@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function TermsAndConditionsComponent() {
   return (
     <section className="flex justify-center">
@@ -32,8 +34,8 @@ export default function TermsAndConditionsComponent() {
               </li>
               <li className="mt-4">
                 <span className="font-bold">Privacy Policy: </span>
-                The use of the tools is subject to the website's Privacy Policy,
-                which can be found <a href="/privacy-policy">here</a>.
+                The use of the tools is subject to the websites Privacy Policy,
+                which can be found <Link href="/privacy-policy">here</Link>.
               </li>
               <li className="mt-4">
                 <span className="font-bold">Changes to Terms: </span>
